@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Роксана — неповторимая</title>
+<style>
+  
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, rgb(113, 68, 226), rgb(86, 181, 184) 63%);
+    color: #233d4d;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: #2a6f97; /* насыщенный синий */
+    padding: 50px 20px 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease forwards;
+  }
+  header p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.9;
+    animation: fadeInUp 1.3s ease forwards;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 0.9;
+      transform: translateY(0);
+    }
+  }
+
+  main {
+    max-width: 900px;
+    margin: 40px auto 80px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 40px 60px;
+    box-shadow: 0 10px 35px rgba(42, 111, 151, 0.3);
+    position: relative;
+    z-index: 1;
+  }
+
+  .profile-photo {
+    display: block;
+    width: 280px;
+    border-radius: 40px;
+    box-shadow: 0 15px 25px rgba(42, 111, 151, 0.5);
+    margin: -140px auto 40px;
+    position: relative;
+    border: 8px solid white;
+    background: white;
+    transition: transform 0.3s ease;
+  }
+  .profile-photo:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 25px 40px rgba(42, 111, 151, 0.7);
+  }
+
+  h2 {
+    color: #2a6f97;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+  }
+  h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #2a6f97;
+    margin: 8px auto 0;
+    border-radius: 2px;
+  }
+
+  p {
+    font-size: 1.15rem;
+    margin: 15px 0 25px;
+    color: #233d4d;
+    text-align: justify;
+  }
+
+  .compliments {
+    background: #d0f0fd;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 6px 15px rgba(42, 111, 151, 0.15);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #1b4f72;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: background 0.5s ease;
+  }
+  .compliments:hover {
+    background: #a4d4f4;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  footer {
+    background: #2a6f97; /* выбран тот же цвет что и хедер */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  a {
+    color: #145374; /* темно-синий */
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #0d324d; 
+    text-decoration: underline;
+  }
+
+  .toggle-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    background-color: #2a6f97; /* синий */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(42, 111, 151, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .toggle-btn:hover {
+    background-color: #145374; /* темнее */
+    box-shadow: 0 6px 15px rgba(20, 83, 116, 0.3);
+  }
+
+  @media (max-width: 650px) {
+    main {
+      padding: 30px 20px 50px;
+      margin: 20px 15px 60px;
+    }
+    .profile-photo {
+      width: 200px;
+      margin-top: -100px;
+    }
+    h1 {
+      font-size: 2.2rem !important;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .compliments {
+      font-size: 1.05rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Роксана</h1>
+  <p>Яркая, талантливая и вдохновляющая девушка, покоряющая сердца и мир!</p>
+</header>
+
+<main>
+  <img src="1.jpg" alt="Фото Роксаны" class="profile-photo" />
+
+  <section>
+    <h2>О Роксане</h2>
+    <p>Роксана — удивительная личность с неиссякаемой энергией и творческим духом. Её чарующая улыбка и природное обаяние не оставляют равнодушными всех, кто её встречает. Она с лёгкостью превращает любое дело в настоящее произведение искусства, вдохновляя окружающих своим примером.</p>
+  </section>
+
+  <section>
+    <h2>Её таланты и увлечения</h2>
+    <p>Роксана с удовольствием погружается в мир искусства и музыки, где она выражает свою индивидуальность. Её страсть к путешествиям и новым открытиям делает её жизненный путь ярким и насыщенным. Она мастер фотографии и мастерски ловит в кадре самые живые и искренние моменты.</p>
+  </section>
+
+  <button class="toggle-btn" id="toggleComplimentsBtn">Показать комплименты о Роксане</button>
+
+  <section class="compliments" id="complimentsSection" style="display: none;">
+    «Роксана — это воплощение вдохновения и красоты. Её внутренний свет озаряет любые пространства, а талант и доброта притягивают самых лучших людей. Её присутствие — настоящий подарок для мира!»
+  </section>
+</main>
+
+<footer>
+  <!-- Пусто по вашему желанию -->
+  <button style="width: 300px; height: 50px; border-radius: 30px;background: whited;"  onclick="document.location='https://rustam927.github.io/R/'" >Сердечко</button>
+</footer>
+
+<script>
+  const btn = document.getElementById('toggleComplimentsBtn');
+  const section = document.getElementById('complimentsSection');
+
+  btn.addEventListener('click', () => {
+    if (section.style.display === 'none') {
+      section.style.display = 'block';
+      btn.textContent = 'Скрыть комплименты о Роксане';
+    } else {
+      section.style.display = 'none';
+      btn.textContent = 'Показать комплименты о Роксане';
+    }
+  });
+</script>
+
+</body>
+</html>
